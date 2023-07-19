@@ -1,10 +1,10 @@
-const BASEURL = 'https://demo.guru99.com/telecom/addcustomer.php';
+const ADDCustomerPage = 'https://demo.guru99.com/telecom/addcustomer.php';
 const invalid_values = [" ", "123", "///", "соня", "n@.ru", "abcd.com", "hi"];
 
 
 describe('invalid data into textfields', () => {
   beforeEach(() => {
-    cy.visit(BASEURL);
+    cy.visit(ADDCustomerPage);
   });
 
   it('Firstname error messages', () => {

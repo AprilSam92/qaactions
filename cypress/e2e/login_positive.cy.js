@@ -1,10 +1,14 @@
 	
+const LoginPage = 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php';
+
+const CustomerPage = 'https://demo.guru99.com/Agile_Project/Agi_V1/customer/Customerhomepage.php'
+
 Cypress.config('defaultCommandTimeout', 100000);
 
 describe('Login page UI & valid input', () =>{
 
 it(' Login page UI check', () => {
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.log('check Guru99 Bank header')
 		cy.get('h2')
 			.should('contain', 'Guru99 Bank')
@@ -39,7 +43,7 @@ it(' Login page UI check', () => {
 
 	it('Valid user', () => {
 		cy.log('Login GURU99 page');
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.should('be.visible')
 			.and('have.css', 'border-color', 'rgb(128, 128, 128)')
@@ -69,17 +73,17 @@ it(' Login page UI check', () => {
 			.click();
 
 		cy.url()
-			.should('be.equal', 'https://demo.guru99.com/Agile_Project/Agi_V1/customer/Customerhomepage.php');		
+			.should('be.equal', CustomerPage);		
 		cy.get('[href="Logout.php"]')
 			.click();
 		cy.url()
-			.should('be.equal', 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php');				
+			.should('be.equal', LoginPage);				
 		});
 
 
 	it('Reset button func', () => {
 		cy.log('Login GURU99 page');
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.should('be.visible')
 			.type('1303');

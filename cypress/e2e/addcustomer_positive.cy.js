@@ -1,9 +1,8 @@
-
-const BASEURL = 'https://demo.guru99.com/telecom/addcustomer.php'
+const AddCustomerPage = 'https://demo.guru99.com/telecom/addcustomer.php'
 
 describe('UI check add customer fields', () =>{
   it('Checking AddCustomer page elements', () => {
-    cy.visit(BASEURL);
+    cy.visit(AddCustomerPage);
     
     cy.log('check Guru99 logo')   
     cy.contains('a', 'Guru99 telecom')
@@ -86,7 +85,7 @@ describe('UI check add customer fields', () =>{
   });
 
   it('Positive check with valid customer data done', () => {
-    cy.visit(BASEURL);
+    cy.visit(AddCustomerPage);
     cy.fillFormWithValidData();
     cy.get('#main input[type=submit]').click();
          cy.url()
@@ -95,7 +94,7 @@ describe('UI check add customer fields', () =>{
   });
 
   it('Positive check with valid customer data pending', () => {
-    cy.visit(BASEURL);
+    cy.visit(AddCustomerPage);
     cy.fillFormWithValidDataPending();
     cy.get('#main input[type=submit]').click();
          cy.url()
@@ -106,7 +105,7 @@ describe('UI check add customer fields', () =>{
 
   it('Check reset button & fields are cleared', () => {
     cy.log('Reset button')
-    cy.visit(BASEURL);
+    cy.visit(AddCustomerPage);
     cy.fillFormWithValidData();
 
     cy.get('input[type="reset"]')

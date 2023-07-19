@@ -1,7 +1,10 @@
+const LoginPage = 'https://demo.guru99.com/Agile_Project/Agi_V1/index.php';
+
+
 describe('Guru99 login page invalid user', () =>{
 	
 	it('Login with empty fields', () => {		
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.should('have.value', '');
 		cy.get('input[name="password"]')
@@ -14,7 +17,7 @@ describe('Guru99 login page invalid user', () =>{
 	});
 
 	it('Login with valid ID and empty password', () => {		
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.type('1303');
 		cy.get('input[name="password"]')
@@ -27,7 +30,7 @@ describe('Guru99 login page invalid user', () =>{
 	});
 
 	it('Login with valid ID and invalid password', () => {		
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.type('1303');
 		cy.get('input[name="password"]')
@@ -43,7 +46,7 @@ describe('Guru99 login page invalid user', () =>{
 	});
 
 	it('Login with invalid ID and valid password', () => {		
-		cy.visit('https://demo.guru99.com/Agile_Project/Agi_V1/index.php');
+		cy.visit(LoginPage);
 		cy.get('input[name="uid"]')
 			.type('1304');
 		cy.get('input[name="password"]')
