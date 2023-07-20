@@ -1,5 +1,5 @@
 const { API_KEY_TEST } = require("../Properties");
-const COLLECTION_ID = "21688951-2bf76ed1-6d6d-4c6d-b29d-8c6a2a39a00b";
+const COLLECTION_ID = "26098769-f23f361a-33ac-4d8a-93cc-7612828092ef";
 const frisby = require("frisby");
 const Joi = frisby.Joi;
 

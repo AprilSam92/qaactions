@@ -1,7 +1,7 @@
 const { API_KEY_TEST } = require("../Properties");
-const COLLECTIONU_ID = "27982648-129f4e67-3670-4a69-8b62-353db4c90852";
-const ENVIRONMENT_ID = "27982648-0175fa67-e2ad-41a8-97c3-84429d03af59";
-const WORKSPACE_ID = "ed19f89a-e9b9-428f-bbcf-6c2b6fce0026";
+const COLLECTIONU_ID = "26098769-dc0fcbe2-198f-4b0c-907d-fe160c54330f";
+const ENVIRONMENT_ID = "26098769-dc0fcbe2-198f-4b0c-907d-fe160c54330f";
+const WORKSPACE_ID = "26098769-dc0fcbe2-198f-4b0c-907d-fe160c54330f";
 const BASE_URL = "https://postman-echo.com";
 
 const frisby = require("frisby");

@@ -5,7 +5,7 @@ const frisby = require("frisby");
 
 describe("Day 21", () => {
   const params = new URLSearchParams({
-    collectionUid: "649a21ab8e7e312bfea1e035",
+    collectionUid: "26098769-00556f22-f820-48ee-a2e1-a72696fa2543",
   });
   it("Submit", async () => {
     const response = await frisby
